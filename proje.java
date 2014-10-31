@@ -1,7 +1,15 @@
 package proje2;
 
+import java.util.Scanner;
+
 public class cizik {
-	public static void main(String geldi ) {
+	public static void main(String[] args ) {
+		Scanner geldi = new Scanner(System.in);
+		String cumle;
+
+		System.out.println("lutfen cumle giriniz");
+		cumle = geldi.next();
+		
 		int i = 1;
 		String tutac;
 		String tutac1;
@@ -13,13 +21,13 @@ public class cizik {
 				tutac2 = geldi.substring(i+1, i+2);
 				if(tutac1 != "_"){
 					if(tutac2 !="_"){
-						geldi=geldi.substring(0, i)+" "+geldi.substring(i, geldi.length()-1);
+						cumle=cumle.substring(0, i)+" "+cumle.substring(i+1, cumle.length());
 						
 					}
 				}
 				
 			}
-			System.out.println(geldi);
+			System.out.println(cumle);
 			
 		}
 		
