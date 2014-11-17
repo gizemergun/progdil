@@ -18,6 +18,11 @@ public class türkce {
 		isimcik.add ("oje");
 		isimcik.add ("komidin");
 		isimcik.add ("bardak");
+		isimcik.add ("sandalye");
+		isimcik.add ("cezve");
+		isimcik.add ("rende");
+		isimcik.add ("perde");
+		isimcik.add ("halı");
 		
 		List<String> sifatcik = new ArrayList<String>();
 		sifatcik.add("iyi");
@@ -30,6 +35,10 @@ public class türkce {
 		sifatcik.add("bikmis");
 		sifatcik.add("mutlu");
 		sifatcik.add("yeni");
+		sifatcik.add("kirli");
+		sifatcik.add("kırmızı");
+		sifatcik.add("bezgin");
+		sifatcik.add("eski");
 		
 		
 		int sayi = rnd.nextInt(isimcik.size());
