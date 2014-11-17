@@ -3,47 +3,42 @@ import java.util.Scanner;
 
 	public class anaprogram {
 		public static void main(String[] args) {
-			ArrayList<String> liste = new ArrayList<String>();
-			Scanner dil = new Scanner (System.in);
-			System.out.println (" Bir dil seciniz?(turkce/ingilizce) ") ;
+			ArrayList<String> liste = new ArrayList<String>() ;
+			
 			String secim ;
-			secim = dil.next();
-			Scanner geldi = new Scanner(System.in);
-			System.out.println("lutfen adet giriniz");
-			int adet;
-			adet = geldi.nextInt();
+			Scanner dil = new Scanner (System.in) ;
+			System.out.println (" Bir dil seciniz?(turkce/ingilizce) ") ;
+			secim = dil.next() ;
 			
+			int adet ;
+			Scanner geldi = new Scanner(System.in) ;
+			System.out.println("lutfen adet giriniz") ;
+			adet = geldi.nextInt() ;
 			
-			
-			if (secim.equals("turkce")) {
-				int sayac;
-				for (sayac = 0; sayac < adet ; sayac++) {
-					String tamlama = türkce.main();
-					Boolean sonuc = kontrolet.kontol(tamlama, liste);
+			int sayac ;
+			for (sayac = 0; sayac < adet ; sayac++) {
+				if (secim.equals("turkce")) {
+					String tamlama = türkce.main() ;
+					Boolean sonuc = kontrolet.kontol(tamlama, liste) ;
 					if (sonuc.equals(true)) {
-						System.out.println(tamlama);
-						liste.add(tamlama);
+						System.out.println(tamlama) ;
+						liste.add(tamlama) ;
 					} else {
-						sayac--;
+						sayac-- ;
 					}
-				 }
-			}
-			else {
-				int sayac;
-				for (sayac = 0; sayac < adet ; sayac++) {
-					String tamlama = ingilizce.main();
-					Boolean sonuc = kontrolet.kontol(tamlama, liste);
+				}
+				else {
+					String tamlama = ingilizce.main() ;
+					Boolean sonuc = kontrolet.kontol(tamlama, liste) ;
 					if (sonuc.equals(true)) {
-						System.out.println(tamlama);
-						liste.add(tamlama);
+						System.out.println(tamlama) ;
+						liste.add(tamlama) ;
 					} else {
-						sayac--;
+						sayac-- ;
 					}
-				 }
+				}
 			}
-
 		}
-
 	}
 
 
