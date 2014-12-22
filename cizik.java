@@ -18,11 +18,8 @@ public class cizik {
 			if (tutac.equals("_")){
 				on = geldi.substring(i-1, i);
 				arka = geldi.substring(i+1, i+2);
-				if (! on.equals("_")){
-					if (! arka.equals("_")){
+				if ((( ! on.equals("_") )&( !  arka.equals("_") )){
 						cumle = cumle.substring(0, i) + " " + cumle.substring(i+1, cumle.length());
-						
-					}
 				}
 				
 			}
