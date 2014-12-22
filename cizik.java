@@ -13,22 +13,27 @@ public class cizik {
 		String tutac;
 		String on;
 		String arka;
-		for (i = 1; i < ( geldi.length()-1) ; i++ ){
-			tutac = geldi.substring(i, i+1);
-			if (tutac.equals("_")){
-				on = geldi.substring(i-1, i);
-				arka = geldi.substring(i+1, i+2);
+		for ( i=1; i < ( cumle.length()-1) ; i++ ) {
+		//tutac = cumle.substring(i, i+1) ;
+			if ( cumle.substring(i, i+1).equals("_") ){
+				on = cumle.substring(i-1, i) ;
+				arka = cumle.substring(i+1, i+2) ;
 				if (( ! on.equals("_") )) {
 					if(  arka.equals("_") ){
 						
-						cumle = cumle.substring(0, i)+"  "+cumle.substring(i+2, cumle.length()) ;
-
+						cumle = cumle.substring(0, i)+"  "+cumle.substring(i+1+j, cumle.length()) ;
+						j++;
 					}
+				
 					else
 						cumle = cumle.substring(0, i)+" "+cumle.substring(i+1, cumle.length()) ;
+						
 					
+				}
 				
 			}
+			
+		}
 			System.out.println(cumle);
 			
 		}
